@@ -1,6 +1,3 @@
-	<script stype="text/javascript">
-jQuery( ".aboutrachanaa .icon-image" ).html( '<div class="icon-title"><i class="icon-general"></i></div>' ) ;
-</script>
 <script stype="text/javascript">
   jQuery(document).ready(function()
   {
