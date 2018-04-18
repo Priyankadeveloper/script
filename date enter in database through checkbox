@@ -17,15 +17,25 @@ if(isset($_POST["submit"]))
 {
 	//$e = $_POST["date"];
 	$date = mysql_real_escape_string($_POST['date']);
-    $new_date = date('Y-m-d',strtotime($date));
+	if($date = mysql_real_escape_string($_POST['date'])=="")
+	{ ?>
+		<script type="text/javascript">
+			
+			alert("Error");
+		</script>
+		
+
+	<?php }
+	else{
+    //$new_date = date('Y-m-d',strtotime($date));
 
 
 /*$sql = "INSERT into date (Date) values ('$new_date')";
 
 mysql_query($sql,$db);*/
-$query = mysql_query("INSERT into date(Date) values ('$new_date')");
+$query = mysql_query("INSERT into date(Date) values ('$date')");
 
-}
+}}
 ?>
 
 <script>
